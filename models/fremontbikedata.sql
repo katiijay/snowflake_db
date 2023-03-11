@@ -1,2 +1,2 @@
 SELECT * 
-FROM {{ref('_pyfremontbikedata')}}
+FROM {{ref('pyfremontbikedata')}}

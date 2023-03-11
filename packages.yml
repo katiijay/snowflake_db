@@ -1,4 +1,0 @@
-packages:
-  - git: "https://github.com/socrata/sodapy.git"
-
-  - git: "https://github.com/pandas-dev/pandas.git"

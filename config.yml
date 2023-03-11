@@ -1,0 +1,5 @@
+models:
+  - name: pyfremontbikedata
+    config:
+      packages:
+        - pandas

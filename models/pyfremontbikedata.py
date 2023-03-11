@@ -1,13 +1,9 @@
-import pandas as pd
-from sodapy import Socrata
+def model(dbt, session):
+    dbt.config(
+        packages = ["pandas"]
+    )
+    import pandas
 
-client = Socrata("data.seattle.gov",None)
-
-# Results, returned as JSON from API / converted to Python list of
-# dictionaries by sodapy.
-results = client.get("65db-xm6k")
-
-# Convert to pandas DataFrame
-results_df = pd.DataFrame.from_records(results)
-
-return results_df
+    data = pandas.read_csv('https://data.seattle.gov/resource/65db-xm6k.csv')
+    df = pandas.DataFrame(data)
+    return df
